@@ -7,10 +7,10 @@
 :root {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  --color-primary: #ffc500;
   --default-padding: 1rem;
+  --color-primary: #ffc500;
   --color-copy: #333
-  color: #333;
+  color: var(--color-copy);
 }
 
 body { 
@@ -48,14 +48,11 @@ ul {
 .navbar__container {
   display: grid;
   grid-template-columns: 1fr 9fr;
-  align-items: center;
+  align-items: center; 
 
-  
   width: 100vw;
   height: 7.75rem;
   padding: 0 1rem;
-  
-
 }
 
 .navbar__links {
@@ -81,12 +78,12 @@ ul {
 .logo-studion {
   font-size: 2.375rem;
   font-weight: 900;
-  line-height: 1ch; 
+  line-height: 1ch; /* espaçamento de texto - relativa ao tamanho da altura
+  do glifo 0 da fonte*/
   text-transform: uppercase;
   text-align: right;
 }
-/* espaçamento de texto - relativa ao tamanho da altura
-do glifo 0 da fonte*/
+
 
 .logo-studion__subtitle {
   font-size: .875rem;
@@ -106,7 +103,7 @@ do glifo 0 da fonte*/
 
 .slide {
   position: relative;
-  height: calc(100vh - 7.75rem);
+  height: calc(90vh - 7.75rem);
 }
 
 .slide__background-image {
@@ -120,7 +117,6 @@ do glifo 0 da fonte*/
   position: absolute;
   top: 6.25rem;
   left: 50vw;
-  margin: 0;
 }
 
 .slide__copy h6 {
@@ -174,7 +170,7 @@ do glifo 0 da fonte*/
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   place-items: center;
-  padding: 4.375rem 1rem;
+  padding: 4.375rem 0;
 }
 
 .counter__container h3 {
@@ -226,4 +222,53 @@ do glifo 0 da fonte*/
 .btn--institutional:hover {
 color: var(--color-copy);
 background: unset;
+box-shadow: 0 1rem 1rem #0006; /* x, y, blur, cor */
+}
+
+.quote {
+  background-image: url(./images/parallax.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.quote__container {
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  min-height: 80vh;
+}
+
+.quote__copy {
+  background-color: #fff;
+  padding: 5.625rem 4.375rem;
+}
+
+.quote__copy h6 {
+  font-size: .9375rem;
+  font-weight: 400;
+  letter-spacing: .1875rem;
+  line-height: 1.4375rem;
+  max-width: 53ch;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.quote__copy h2 {
+  font-size: 5rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  letter-spacing: -.1875rem;
+  margin: 1.875rem 0;
+}
+
+.quote__copy h2 span {
+display: block;
+}
+
+.btn--quote {
+  color: var(--color-copy);
+  border-color: var(--color-copy);
+  background: unset;
 }
