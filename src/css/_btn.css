@@ -14,22 +14,43 @@
 .btn:hover,
 .btn:active,
 .btn:focus,
-.btn--institutional,
-.btn--contact {
-  border-color: var(--color-primary);
-  background-color: var(--color-primary);
+.btn--institutional {
+  border-color: var(--color-copy);
+  background-color: var(--color-copy);
   color: #fff;
 }
 
-.btn--institutional:hover,
-.btn--contact:hover {
-  color: var(--color-copy);
+.btn--contact:hover,
+.btn--contact:active,
+.btn--contact:focus {
+  border-color: var(--color-copy);
+  background-color: #fff;
+  color: var(--color-primary);
+}
+
+.btn--contact {
+  border-color: var(--color-copy);
+  background-color: #fff;
+  color: var(--color-primary);
+}
+
+.btn--institutional:hover {
+  color: var(--color-secundary);
   background: unset;
   box-shadow: 0 1rem 1rem #0006; /* x, y, z, blur, cor */
 }
 
+@media screen and (min-width: 1280px) {
+  .btn--institutional,
+  .btn--quote {
+    display: inline;
+  }
+}
+
 .btn--contact:hover {
-  color: #fff;
+  color: var(--color-secundary);
+  background: var(--color-copy);
+  box-shadow: 0 1rem 1rem #0006; /* x, y, z, blur, cor */
 }
 
 .btn--quote {
