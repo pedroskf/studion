@@ -1,0 +1,29 @@
+.vascular-body {
+    display: flex;
+    margin: auto;
+    margin-top: 0px;
+    max-width: 70%;
+    max-height: 70%
+}
+
+#circleSvg {
+    transition: filter 0.1s ease-out;
+    opacity: 0;
+  }
+
+#circleSvg:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+#svgCircle {
+    position: relative;
+    width: 85%;
+    top: 365px;
+    left: 210px;
+
+  }
+
+#circleSvg:hover {
+    filter: blur(2px);
+}
